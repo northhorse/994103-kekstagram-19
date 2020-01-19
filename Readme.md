@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Павел Хоружев](https://up.htmlacademy.ru/javascript/19/user/994103).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
 
 ---
 
