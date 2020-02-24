@@ -183,7 +183,7 @@ var controls = effects.querySelectorAll('.effects__radio');
 var effectlvl = document.querySelector('.effect-level');
 var effectPin = document.querySelector('.effec-level__pin');
 var effectDepth = document.querySelector('.effec-depth');
-var effectLine = document.querySelector('.effect-level__line');
+
 
 var changeEffect = function (control) {
 
@@ -235,6 +235,8 @@ hashtagsInput.addEventListener('input', function (evt) {
   }
 });
 
-// не правильно реализлвад полверку хештегов,
-//нужно пересмотреть лекции по самозап функциям. Посмотри что у меня на данный момент.
-//может посоветеуешь что.
+// не правильно реализлвад полверку хештегов.
+
+// нужно пересмотреть лекции по самозап функциям. Посмотри что у меня на данный момент.
+
+// может посоветеуешь что.
