@@ -1,78 +1,71 @@
-'use strict';
-// константы
-var NUMBER_OF_PHOTOS = 25;
-var MIN_LIKES = 15;
-var MAX_LIKES = 200;
-var MIN_AVATARS = 1;
-var MAX_AVATARS = 6;
+// 'use strict';
+// // константы
+// var NUMBER_OF_PHOTOS = 25;
+// var MIN_LIKES = 15;
+// var MAX_LIKES = 200;
+// var MIN_AVATARS = 1;
+// var MAX_AVATARS = 6;
 
-// массив описаний к фото
-var photoDescription = [
-  'Гора',
-  'Дуб',
-  'Море',
-  'Марс',
-  'Луна',
-  'Звёзды',
-];
+// // массив описаний к фото
+// var photoDescription = [
+//   'Гора',
+//   'Дуб',
+//   'Море',
+//   'Марс',
+//   'Луна',
+//   'Звёзды',
+// ];
 
-// массив комментариев к фото
-var comments = [
-  'Всё отлично!',
-  'В целом всё неплохо. Но не всё.',
-  'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
-  'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
-  'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
-  'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!',
-];
+// // массив комментариев к фото
+// var comments = [
+//   'Всё отлично!',
+//   'В целом всё неплохо. Но не всё.',
+//   'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
+//   'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
+//   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
+//   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!',
+// ];
 
-// массив имен
-var names = [
-  'Антон',
-  'Александр',
-  'Иван',
-  'Коля',
-  'Лукреция',
-  'Марина',
-  'Наполеон',
-];
+// // массив имен
+// var names = [
+//   'Антон',
+//   'Александр',
+//   'Иван',
+//   'Коля',
+//   'Лукреция',
+//   'Марина',
+//   'Наполеон',
+// ];
 
-// функция случайного числа из заданного диапазона
-var getRndRange = function (min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
 
-// функция случайного элемента массива
-var getRndElement = function (arr) {
-  return Math.floor(Math.random() * arr.length);
-};
 
-// функция создания массива объектов
-var getPhotoObject = function (photosNumbers) {
-  var mockArr = [];
-  for (var i = 0; i < photosNumbers; i++) {
-    var photoObject = {
-      url: 'photos/' + (i + 1) + '.jpg',
-      description: photoDescription[getRndElement(photoDescription)],
-      likes: getRndRange(MIN_LIKES, MAX_LIKES),
+// // функция создания массива объектов
+// var getPhotoObject = function (photosNumbers) {
+//   var mockArr = [];
+//   for (var i = 0; i < photosNumbers; i++) {
+//     var photoObject = {
+//       url: 'photos/' + (i + 1) + '.jpg',
+//       description: photoDescription[getRndElement(photoDescription)],
+//       likes: getRndRange(MIN_LIKES, MAX_LIKES),
 
-      comments: [
-        {
-          avatar: 'img/avatar-' + getRndRange(MIN_AVATARS, MAX_AVATARS),
-          message: comments[getRndElement(comments)] + ' ' + comments[getRndElement(comments)],
-          name: names[getRndElement(names)]
-        },
-        {
-          avatar: 'img/avatar-' + getRndRange(MIN_AVATARS, MAX_AVATARS),
-          message: comments[getRndElement(comments)] + ' ' + comments[getRndElement(comments)],
-          name: names[getRndElement(names)]
-        }
-      ]
-    };
-    mockArr.push(photoObject);
-  }
-  return mockArr;
-};
+//       comments: [
+//         {
+//           avatar: 'img/avatar-' + getRndRange(MIN_AVATARS, MAX_AVATARS),
+//           message: comments[getRndElement(comments)] + ' ' + comments[getRndElement(comments)],
+//           name: names[getRndElement(names)]
+//         },
+//         {
+//           avatar: 'img/avatar-' + getRndRange(MIN_AVATARS, MAX_AVATARS),
+//           message: comments[getRndElement(comments)] + ' ' + comments[getRndElement(comments)],
+//           name: names[getRndElement(names)]
+//         }
+//       ]
+//     };
+//     mockArr.push(photoObject);
+//   }
+//   return mockArr;
+// };
+
 
 var pictureListElement = document.querySelector('.pictures');
 var pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
@@ -181,7 +174,7 @@ buttonIncrease.addEventListener('click', function () {
 var effects = document.querySelector('.effects');
 var controls = effects.querySelectorAll('.effects__radio');
 var effectlvl = document.querySelector('.effect-level');
-var effectPin = document.querySelector('.effec-level__pin');
+var effectPin = document.querySelectorAll('.effec-level__pin');
 var effectDepth = document.querySelector('.effec-depth');
 
 
