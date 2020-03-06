@@ -53,10 +53,10 @@
     return photoCard;
   };
 
-  var photoAlbums = getPhoto(PHOTO_QUANTITY);
+  var photosAlbum = getPhoto(PHOTO_QUANTITY);
 
   window.data = {
-    photoAlbums: photoAlbums
+    photosAlbum: photosAlbum
   };
 
 })();
