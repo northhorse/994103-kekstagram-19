@@ -9,16 +9,6 @@
   var MIN_COMMENTS = 0;
   var MAX_COMMENTS = 2;
 
-
-  function likeFactory() {
-    var likeBox = [];
-    for (var j = MIN_LIKES; j <= MAX_LIKES; j++) {
-      likeBox.push(j);
-    }
-    return likeBox;
-  }
-
-
   var message = [
     'Всё отлично!',
     'В целом всё неплохо. Но не всё.',
@@ -37,7 +27,6 @@
     'Наполеон',
   ];
 
-
   var createComments = function (max) {
     var comments = [];
     for (var i = 0; i < max; i++) {
@@ -53,11 +42,11 @@
 
   var getPhoto = function (number) {
     var photoCard = [];
-    for (var i = 0; i < number; i++) {
+    for (var i = 0; i <= number; i++) {
       photoCard[i] = {
         url: 'photos/' + (i + 1) + '.jpg',
         description: 'window.utils.getRndElement(photoDescription),',
-        likes: window.utils.getRndElement(likeFactory()),
+        likes: window.utils.getRndRange(MIN_LIKES, MAX_LIKES),
         comments: createComments(window.utils.getRndRange(MIN_COMMENTS, MAX_COMMENTS)),
       };
     }
@@ -71,4 +60,5 @@
   };
 
 })();
+
 
