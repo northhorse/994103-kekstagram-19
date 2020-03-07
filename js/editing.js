@@ -19,18 +19,18 @@
 
   // настройка фильтров
 
-  var theFilter;
+  var actualFilter;
 
   var photoElementChangeHandler = function (evt) {
     if (evt.target.matches('input[type="radio"]')) {
       editedPhotoElement.style.filter = '';
-      editedPhotoElement.classList.remove('effects__preview--' + theFilter);
-      theFilter = evt.target.value;
+      editedPhotoElement.classList.remove('effects__preview--' + actualFilter);
+      actualFilter = evt.target.value;
       if (evt.target.matches('input[value="none"]')) {
         effectBarElement.classList.add('hidden');
       } else {
         effectBarElement.classList.remove('hidden');
-        editedPhotoElement.classList.add('effects__preview-- ' + theFilter);
+        editedPhotoElement.classList.add('effects__preview-- ' + actualFilter);
         effectToggleElement.style.left = 100 + '%';
         effectDepthElement.style.width = 100 + '%';
         effectLevelValue.value = 100 + '%';
@@ -73,7 +73,7 @@
   var toggleMouseUpHandler = function () {
     effectToggleElement.style.left = POSITION_OF_TOGGLE + '%';
     effectDepthElement.style.width = POSITION_OF_TOGGLE + '%';
-    editedPhotoElement.style.filter = FILTERS_MAP[theFilter(POSITION_OF_TOGGLE)];
+    editedPhotoElement.style.filter = FILTERS_MAP[actualFilter(POSITION_OF_TOGGLE)];
     effectLevelValue.value = POSITION_OF_TOGGLE;
   };
 

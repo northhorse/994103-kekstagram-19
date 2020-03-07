@@ -42,7 +42,7 @@
 
   var getPhoto = function (number) {
     var photoCard = [];
-    for (var i = 0; i <= number; i++) {
+    for (var i = 0; i < number; i++) {
       photoCard[i] = {
         url: 'photos/' + (i + 1) + '.jpg',
         description: 'window.utils.getRndElement(photoDescription),',
@@ -54,7 +54,6 @@
   };
 
   var photosAlbum = getPhoto(PHOTO_QUANTITY);
-
   window.data = {
     photosAlbum: photosAlbum
   };
