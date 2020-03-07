@@ -77,7 +77,7 @@
     effectLevelValue.value = POSITION_OF_TOGGLE;
   };
 
-  // масштабирование
+  // масшта
 
   var SCALE_STEP = 25;
   var SCALE_VALUE_MIN = 25;

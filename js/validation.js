@@ -21,11 +21,9 @@
     return true;
   };
 
-
   var getSomeSymbol = function (word) {
     return word.match(/^#[a-zA-Z0-9а-яА-Я]+$/);
   };
-
 
   var getInvalidMessage = function (array) {
     var message = '';
