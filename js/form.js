@@ -62,9 +62,9 @@
     closeEditorForm();
   });
 
-  editFormCloseElement.addEventListener('keydown', function (evt) {
-    if (evt.key === window.utils.ENTER_KEY) {
-      closeEditorForm();
-    }
+  editFormCloseElement.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closeEditorForm();
+
   });
 })();
