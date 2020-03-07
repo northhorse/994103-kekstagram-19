@@ -30,7 +30,7 @@
         effectBarElement.classList.add('hidden');
       } else {
         effectBarElement.classList.remove('hidden');
-        editedPhotoElement.classList.add('effects__preview-- ' + actualFilter);
+        editedPhotoElement.classList.add('effects__preview--' + actualFilter);
         effectToggleElement.style.left = 100 + '%';
         effectDepthElement.style.width = 100 + '%';
         effectLevelValue.value = 100 + '%';
