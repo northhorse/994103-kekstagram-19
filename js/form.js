@@ -1,6 +1,10 @@
 'use strict';
 
 (function () {
+
+  var bodyElement = document.body;
+
+
   var uploadNewElement = document.querySelector('.img-upload__input');
   var editFormElement = document.querySelector('.img-upload__overlay');
   var editFormCloseElement = editFormElement.querySelector('.img-upload__cancel');
@@ -21,7 +25,7 @@
 
   var openEditorForm = function () {
     editFormElement.classList.remove('hidden');
-    document.addEventListener('keydown', editFormEscPressHandler);
+    editFormElement.addEventListener('keydown', editFormEscPressHandler);
     document.querySelector('body').classList.add('modal-open');
     editFormElement.addEventListener('change', window.editing.photoElementChangeHandler);
     effectToggleElement.addEventListener('mouseup', window.editing.toggleMouseUpHandler);
@@ -35,9 +39,9 @@
     editFormElement.classList.add('hidden');
     document.removeEventListener('keydown', editFormEscPressHandler);
     uploadNewElement.value = '';
-    editedPhotoElement.style.filter = '';
-    editedPhotoElement.style.transform = '';
-    editedPhotoElement.classList.remove('effects__preview--' + window.editing.actualFilter);
+    scaleValueElement.style.filter = '';
+    scaleValueElement.style.transform = '';
+    scaleValueElement.classList.remove('effects__preview--' + window.editing.actualFilter);
     scaleValueElement.value = 100 + '%';
     document.querySelector('body').classList.remove('modal-open');
     editFormElement.removeEventListener('change', window.editing.photoElementChangeHandler);
