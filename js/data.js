@@ -8,7 +8,7 @@
     MIN_AVATARS: 1,
     MAX_AVATARS: 6,
     MIN_COMMENTS: 0,
-    MAX_COMMENTS: 211,
+    MAX_COMMENTS: 23,
 
     userMessage: [
       'Всё отлично!',
