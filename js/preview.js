@@ -28,7 +28,7 @@
 
   // Генерируем  коменты
 
-  function renderMessageSet(array) {
+  function renderMessageList(array) {
     window.utils.removeChilds(usersMessages);
     var fragmentMessage = document.createDocumentFragment();
     for (var i = 0; i < array.length; i++) {
@@ -46,7 +46,7 @@
     var pictureMessagesCount = bigPicture.querySelector('.comments-count');
     var pictureDescription = bigPicture.querySelector('.social__caption');
 
-    renderMessageSet(arrayPictures[pictureIndex].messages);
+    renderMessageList(arrayPictures[pictureIndex].messages);
     pictureUrl.src = arrayPictures[pictureIndex].url;
     pictureLikes.textContent = arrayPictures[pictureIndex].likes;
     pictureMessagesCount.textContent = arrayPictures[pictureIndex].messages.length;
