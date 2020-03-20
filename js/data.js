@@ -42,11 +42,11 @@
     ],
   };
 
-  // generate random count of comments on blog
+  //  random count of comments on blog
   function generateMessage() {
     var messages = [];
 
-    var commentsCount = getRandomNumber(picturesData.MIN_AVATARS, picturesData.MAX_AVATARS - 1);
+    var commentsCount = getRandomNumber(picturesData.MIN_COMMENTS, picturesData.MAX_COMMENTS - 1);
 
     for (var i = 0; i < commentsCount; i++) {
       messages.push({
@@ -75,6 +75,7 @@
     var randomElement = array[randomIndex];
     return randomElement;
   }
+
 
   window.data = {
 
