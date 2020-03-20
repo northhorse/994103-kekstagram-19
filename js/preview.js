@@ -26,7 +26,7 @@
     return userMessage;
   }
 
-  // Генерируем  коменты
+  // Генерируем  комент
 
   function renderMessageList(array) {
     window.utils.removeChilds(usersMessages);
