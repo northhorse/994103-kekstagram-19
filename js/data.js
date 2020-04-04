@@ -8,7 +8,7 @@
     MIN_AVATARS: 1,
     MAX_AVATARS: 6,
     MIN_COMMENTS: 0,
-    MAX_COMMENTS: 211,
+    MAX_COMMENTS: 23,
 
     userMessage: [
       'Всё отлично!',
@@ -42,11 +42,11 @@
     ],
   };
 
-  // generate random count of comments on blog
+  //  random count of comments on blog
   function generateMessage() {
     var messages = [];
 
-    var commentsCount = getRandomNumber(picturesData.MIN_AVATARS, picturesData.MAX_AVATARS - 1);
+    var commentsCount = getRandomNumber(picturesData.MIN_COMMENTS, picturesData.MAX_COMMENTS - 1);
 
     for (var i = 0; i < commentsCount; i++) {
       messages.push({
@@ -60,7 +60,7 @@
 
   // Функция, возвращающая url аватара
   function generateSrcImage() {
-    var numberImage = getRandomNumber(picturesData.MIN_AVATAR, picturesData.MAX_AVATAR);
+    var numberImage = getRandomNumber(picturesData.MIN_AVATARS, picturesData.MAX_AVATARS);
     return 'img/avatar-' + numberImage + '.svg';
   }
 
@@ -75,6 +75,7 @@
     var randomElement = array[randomIndex];
     return randomElement;
   }
+
 
   window.data = {
 

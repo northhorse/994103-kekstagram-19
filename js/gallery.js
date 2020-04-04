@@ -5,7 +5,7 @@
   // рендерим фотки в шаблон
 
   function renderPicture(image, pictureIndex) {
-    var picturesTemplateElement = document.querySelector('#picture').content.querySelector('.picture');
+    var picturesTemplateElement = document.querySelector('#picture').content;
     var picturesElement = picturesTemplateElement.cloneNode(true);
 
     picturesElement.querySelector('.picture__img').src = image.url;
@@ -25,9 +25,12 @@
       for (var i = 0; i < arrayPictures.length; i++) {
         fragment.appendChild(renderPicture(arrayPictures[i], i));
       }
+
       window.preview.showPhoto(arrayPictures);
+
       picturesList.appendChild(fragment);
     }
   };
+
 
 })();

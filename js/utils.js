@@ -14,7 +14,7 @@
       element.innerHTML = '';
     },
 
-    createDomElement: function (tagName, className) {
+    createDOMElement: function (tagName, className) {
       var element = document.createElement(tagName);
       element.classList.add(className);
       return element;
