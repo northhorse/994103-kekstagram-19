@@ -60,7 +60,7 @@
 
   // Функция, возвращающая url аватара
   function generateSrcImage() {
-    var numberImage = getRandomNumber(picturesData.MIN_AVATAR, picturesData.MAX_AVATAR);
+    var numberImage = getRandomNumber(picturesData.MIN_AVATARS, picturesData.MAX_AVATARS);
     return 'img/avatar-' + numberImage + '.svg';
   }
 
